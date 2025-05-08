@@ -1,0 +1,60 @@
+snippets de codigo para acompanhar a sessão 1.
+
+1- 
+npm create vite
+
+
+
+2- 
+-acrescentar pasta images a çpasta "public"
+-acrescentar ficheiro seeds.js para a pasta "src"
+
+
+
+3-
+
+instalar "npm i semantic-ui-css" acrescentar no main.jsx:
+...
+import './index.css'
+import 'semantic-ui-css/semantic.min.css'
+....
+
+
+4- 
+substituir no index.html a 
+<div id="root"></div>
+por:
+
+
+<div class="main ui text container">
+    <h1 class="ui dividing centered header">Popular Products</h1>
+    <div id="root"></div>
+</div>
+
+
+
+5-
+Depois de criar a component Product, mudar a view para :
+<section className="item">
+      
+    <article className="image">
+    <img src="images/products/image-aqua.png" />
+    </article>
+
+    <article className="middle aligned content">
+
+    <header className="description">
+        <a>Fort Knight </a>
+        <p> Authentic renaissance actors, devlivered in just two weeks. </p>
+    </header>
+    
+    <aside className="extra">
+        <span>Submitted by: </span>
+        <img className="ui avatar image" src="images/avatars/daniel.jpg" />
+    </aside>
+
+    </article>
+</section>
+
+
+

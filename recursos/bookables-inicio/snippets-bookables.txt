@@ -1,0 +1,45 @@
+
+
+
+1- criar novo projeto:
+npx create-react-app react-hooks
+
+
+2- apagar ficheiros que nao iremos utilizar ou seja:
+pasta public: deixar so o index.html, apagar comentarios e deixar somente dentro do body, div com id root
+pasta src: deixar so ficheiros App.js, App.css, index.js, ajustar codigo do index e do App.js para que não dê erro
+
+3 - yarn start, ou npm start, para ver se o projeto esta a arrancar.
+
+
+4-acrescentar á pasta src, ficheiro "db.json"
+
+5-
+atualizar ficheiro "App.css" para :
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 80px;
+}
+
+.bookables {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+.bookables > li {
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid silver;
+}
+.selected {
+  background: #ddd;
+}
+.bookableDetails {
+  text-align:left;
+}
+
+
