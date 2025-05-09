@@ -1,0 +1,1 @@
+export const Xpto = () => <h1>Ola React do XPTO</h1>
