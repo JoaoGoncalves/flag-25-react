@@ -1,13 +1,19 @@
 export default function Product(props) {
   
   const {
+    id,
     title,
     url,
     description,
     votes,
     productImageUrl,
     submitterAvatarUrl,
+    handleVote,
   } = props;
+
+  const handleUpVote = () => {
+    handleVote(id)
+  }
 
   return (
     <section className="item">
@@ -17,7 +23,7 @@ export default function Product(props) {
 
       <article className="middle aligned content">
         <div className="header">
-          <a>
+          <a onClick={handleUpVote} >
             <i className="large caret up icon"></i>
           </a>
           {votes}
