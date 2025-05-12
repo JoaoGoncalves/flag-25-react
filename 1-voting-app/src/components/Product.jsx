@@ -8,12 +8,17 @@ export default function Product(props) {
     votes,
     productImageUrl,
     submitterAvatarUrl,
-    handleVote,
+    changeUpVote,
+    changeDownVote,
   } = props;
 
   const handleUpVote = () => {
-    handleVote(id)
+    changeUpVote(id)
   }
+  const handleDownVote = () => {
+    changeDownVote(id)
+  }
+  
 
   return (
     <section className="item">
@@ -27,6 +32,9 @@ export default function Product(props) {
             <i className="large caret up icon"></i>
           </a>
           {votes}
+          <a onClick={handleDownVote} >
+            <i className="large caret down icon"></i>
+          </a>
         </div>
 
         <header className="description">

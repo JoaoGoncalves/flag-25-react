@@ -8,23 +8,26 @@ function ProductList() {
 
 
     const handleProductUpVote = (id) => {
-        //console.log(`Foi votado o producto com id: ${id}`);
 
         const updatedProducts = prods.map( p => {
             if(p.id === id){
-                return {...p, votes: p.votes + 1}
+                return {...p, votes: p.votes + 1 }
             } else {
                 return p;
             }
         })
-
         setProds(updatedProducts);
-       /*  products.map( p => {
+    }
+    const handleProductDownVote = (id) => {
+
+        const updatedProducts = prods.map( p => {
             if(p.id === id){
-                p.votes = p.votes + 1;
-                
+                return {...p, votes: p.votes - 1 }
+            } else {
+                return p;
             }
-        }) */
+        })
+        setProds(updatedProducts);
     }
 
     const sortedProducts = prods.sort( (a, b) => (b.votes - a.votes));
@@ -39,7 +42,9 @@ function ProductList() {
                 votes = {product.votes}
                 productImageUrl = {product.productImageUrl}
                 submitterAvatarUrl = {product.submitterAvatarUrl}
-                handleVote = {handleProductUpVote}
+                changeUpVote = {handleProductUpVote}
+                changeDownVote = {handleProductDownVote}
+
         />
     ));
 
