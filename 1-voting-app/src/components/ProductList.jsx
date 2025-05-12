@@ -4,12 +4,9 @@ import {products} from '../seeds';
 
 function ProductList() {
 
-    const product = products[3];
-
-    return (
-        <section className="ui unstackable items">
-            <Product 
-                /* {...product} */
+    //const product = products[1];
+    const productComponents = products.map( product => (
+        <Product 
                 id = {product.id}
                 title = {product.title}
                 description = {product.description}
@@ -17,7 +14,12 @@ function ProductList() {
                 votes = {product.votes}
                 productImageUrl = {product.productImageUrl}
                 submitterAvatarUrl = {product.submitterAvatarUrl}
-            />
+        />
+    ));
+
+    return (
+        <section className="ui unstackable items">
+            {productComponents}
         </section>
     );
 }
