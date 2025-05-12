@@ -5,6 +5,8 @@ import { useState } from "react";
 function ProductList() {
 
     const [prods, setProds] = useState(products) //initialState
+    const [descendent, setDescendent] = useState(false);
+
 
 
     const handleProductVote = (id, vote) => {
@@ -18,9 +20,13 @@ function ProductList() {
         })
         setProds(updatedProducts);
     }
+
+    const changeSort = () => {
+        setDescendent(!descendent)
+    }
     
 
-    const sortedProducts = prods.sort( (a, b) => (b.votes - a.votes));
+    const sortedProducts = prods.sort( (a, b) => ( descendent ? (a.votes - b.votes) : (b.votes - a.votes)) );
 
     const productComponents = sortedProducts.map( product => (
         <Product 
@@ -33,12 +39,13 @@ function ProductList() {
                 productImageUrl = {product.productImageUrl}
                 submitterAvatarUrl = {product.submitterAvatarUrl}
                 changeVote = {handleProductVote}
-
+ 
         />
     ));
 
     return (
         <section className="ui unstackable items">
+            <button onClick={changeSort}>up / down</button>
             {productComponents}
         </section>
     );
