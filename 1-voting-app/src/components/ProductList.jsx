@@ -7,28 +7,18 @@ function ProductList() {
     const [prods, setProds] = useState(products) //initialState
 
 
-    const handleProductUpVote = (id) => {
+    const handleProductVote = (id, vote) => {
 
         const updatedProducts = prods.map( p => {
             if(p.id === id){
-                return {...p, votes: p.votes + 1 }
+                return {...p, votes: p.votes + vote }
             } else {
                 return p;
             }
         })
         setProds(updatedProducts);
     }
-    const handleProductDownVote = (id) => {
-
-        const updatedProducts = prods.map( p => {
-            if(p.id === id){
-                return {...p, votes: p.votes - 1 }
-            } else {
-                return p;
-            }
-        })
-        setProds(updatedProducts);
-    }
+    
 
     const sortedProducts = prods.sort( (a, b) => (b.votes - a.votes));
 
@@ -42,8 +32,7 @@ function ProductList() {
                 votes = {product.votes}
                 productImageUrl = {product.productImageUrl}
                 submitterAvatarUrl = {product.submitterAvatarUrl}
-                changeUpVote = {handleProductUpVote}
-                changeDownVote = {handleProductDownVote}
+                changeVote = {handleProductVote}
 
         />
     ));
