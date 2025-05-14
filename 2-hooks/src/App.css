@@ -16,6 +16,7 @@
   margin: 0 0 1em;
   padding: 1em;
   border: 1px solid silver;
+  cursor: pointer;
 }
 .selected {
   background: #ddd;
