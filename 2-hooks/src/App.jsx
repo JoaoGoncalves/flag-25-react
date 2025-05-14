@@ -1,10 +1,22 @@
 
 import './App.css'
+import Bookables from './components/Bookables'
+import ClassComp from './components/ClassComp'
+import FuncComp from './components/FuncComp'
 
 function App() {
 
   return (
-    <section className='App'>Hooks em react</section>
+    <>
+      <h1>Hooks em react</h1>
+      <hr />
+      <section className='App'>
+        {/* <ClassComp />
+        <FuncComp /> */}
+        <Bookables />
+      </section>
+    </>
+    
   )
 }
 
