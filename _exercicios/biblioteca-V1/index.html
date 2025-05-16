@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index-flex.css">
+    <title>Biblioteca de Livros de JS</title>
+</head>
+<body>
+    <h1>Biblioteca de Livros de JS</h1>
+
+    <section class="filters" id="filters">
+        <div>
+            <button class="btn" id="allBtn">All</button>
+            <button class="btn" id="readBtn">read</button>
+            <button class="btn" id="notReadBtn">not read</button>
+        </div>
+        <div>
+            <label for="searchTxt">Search Title</label>
+            <input type="search" class="searchTxt" id="searchTxt">
+        </div>
+    </section>
+
+    <section class="grid" id="grid">
+    </section>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

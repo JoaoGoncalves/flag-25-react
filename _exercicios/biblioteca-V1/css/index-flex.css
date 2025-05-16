@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+body > h1{
+    margin: .5em 0;
+    padding: .2em;
+}
+
+/* section.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    padding: 1em;
+}
+
+section.grid article{
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 1em;
+
+} */
+
+section.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 1em;
+}
+
+section.grid article{
+    flex: 0 1 300px;
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+section.grid article > *{
+    margin: .8em 0;
+}
+
+
+.btn {
+    padding: .5em 1em;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+section.filters{
+    background-color: lightgreen;
+    padding: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-size: 1.2rem;
+}
+
+input.searchTxt {
+    padding: .5em;
+    outline: none;
+}
+
