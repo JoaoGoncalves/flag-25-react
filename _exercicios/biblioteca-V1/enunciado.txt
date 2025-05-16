@@ -1,0 +1,8 @@
+
+1 - "partir" a aplicacao em compenntes.
+2 - criar uma versao estatica da aplicação
+3 - aplicação " Data-Driven", ligar ao modelo de dados
+4 - definir qual a componente que ira gerir o "State"
+5 - passar via "props" os dados do State
+6 - criar as intercoes nas compoentes, para alterar o "State" da aplicacao
+7 - NAO É PARA FAZER - ligar ao endpoint da minha API externa
