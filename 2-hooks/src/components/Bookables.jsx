@@ -2,6 +2,7 @@ import { useState } from "react";
 import { bookables } from "../db.json";
 
 export default function Bookables() {
+  
   const [bookableIndex, setBookableIndex] = useState(0);
   const [group, setGroup] = useState("Rooms");
   const [hasDetails, setHasDetails] = useState(true);
