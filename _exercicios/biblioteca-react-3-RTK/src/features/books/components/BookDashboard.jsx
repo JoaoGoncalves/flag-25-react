@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import BookList from "./BookList";
 import { useEffect } from "react";
 import { getBooks } from "../booksSlice";
+import BookFilters from "./BookFilters";
 
 
 export default function BookDashboard() {
@@ -21,6 +22,7 @@ export default function BookDashboard() {
   return (
     <section> 
         <h1>Book Dashboard</h1>
+        <BookFilters />
         <BookList />
     </section>
   );

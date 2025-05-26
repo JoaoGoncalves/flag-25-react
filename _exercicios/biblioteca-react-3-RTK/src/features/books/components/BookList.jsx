@@ -4,12 +4,12 @@ import Book from "./Book";
 
 export default function BookList() {
 
-  const {books} = useSelector(state => state.library)
+  const {filteredBooks} = useSelector(state => state.library)
 
   return (
         <section className="grid">
             {
-               books.map( b => 
+               filteredBooks.map( b => 
                   <Book 
                     key={b.id} 
                     book={b}
